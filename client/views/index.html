@@ -1,0 +1,42 @@
+<head>
+  <meta charset="utf-8">
+  <title>dynamicTemplete</title>
+</head>
+<body>
+ {{>layout}}
+</body>
+
+<template name="layout">
+Layout
+{{#each items}}
+	{{#typeIs type}}
+
+	{{/typeIs}}
+
+
+{{/each}}
+<!-- <div class="simple">a</div>
+<div class="complex">b</div>
+<div class="simple">c</div>
+<div class="simple">d</div>
+<div class="simple">e</div> -->
+
+
+</template>
+
+<template name="simple">
+<div>
+  Simple {{name}}: {{value}}
+  </div>
+</template>
+
+<template name="complex">
+<div>
+  complex {{name}}: {{value}}
+  </div>
+</template>
+
+
+<template name="other">
+	<div>The third type</div>
+</template>
